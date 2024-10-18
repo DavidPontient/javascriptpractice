@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tapping Speed Test</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Tapping Speed Test</h1>
+        <p>How fast can you click? Try to tap the button as many times as possible in 10 seconds.</p>
+
+        <div class="results">
+            <p>Clicks: <span id="click">0</span></p> 
+            <p>Time left: <span id="time">10</span> seconds</p>
+        </div>
+
+        <button id="tapButton" onclick="tap()">Tap me!</button>
+        <input type="button" class="reload-btn" value="Reload" onClick="document.location.reload(true)">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

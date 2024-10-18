@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Untitled 1</title>
+</head>
+
+<body>
+
+<h1>People entered : <p1 id ="people entered"></p1></h1>
+
+<h1 id="too much"></h1>
+<button onclick="count_people()">count</button>
+<input type= button value= "reset" onClick="document.location.reload(true)">
+ <script>
+   count=0
+   function count_people() {
+      count ++
+      document.getElementById("people entered").innerHTML=count
+    if (count>10) {
+      document.getElementById("too much").innerHTML= "Too much"
+    } 
+    if (count>20) {
+      document.getElementById("too much").innerHTML= "Ayo chill"
+    }
+   }
+ </script>
+</body>
+</html>

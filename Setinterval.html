@@ -1,0 +1,31 @@
+<p>Timer: <span id="start"> </span></p> 
+<p>Waiting: <span id="timer">0</span> seconds</p>
+<p>People Entered: <span id="people-entered">0</span></p>
+<button onclick="count_people()">Start Timer</button>
+
+<script>
+let count = 0;
+let time = 0;
+let timerInterval;
+
+function count_people() {
+    // Increment the people count
+    count++;
+    document.getElementById("people-entered").innerText = count;
+    
+    // Update the "start" text to indicate the timer has started
+    document.getElementById("start").innerText = "Started";
+
+    // Clear any previous intervals to prevent multiple timers
+    //clearInterval(timerInterval);
+    
+    // Reset the time to 0 each time the button is clicked
+    time = 0;
+
+    // Start the timer interval
+    timerInterval = setInterval(() => {
+        document.getElementById("timer").innerText = time++;
+    }, 1000);  // Update the timer every second
+}
+</script>
+

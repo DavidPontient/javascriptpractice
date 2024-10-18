@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tapping Speed Test</title>
+</head>
+<body>
+    <h1>Tapping Speed Test</h1>
+    <p>How fast can you click?</p>
+    <p>Tap reload, then start immediately</p>
+    <p>timer: <span id="time"></span></p>
+    <p>Clicks: <span id="click">0</span></p> 
+    <button onclick="tap()">Click</button>  
+    <input type="button" value="Reload" onClick="document.location.reload(true)">
+
+    <script>
+        var count = 0;
+        var time = 0;
+        var timer;
+        var timerstarted = false
+
+        // Function to count the clicks
+        function tap() {
+            document.getElementById("click").innerText = ++count;
+        
+
+        // Start the timer immediately
+        if (!timerstarted) {
+            timerstarted = true
+        timer = setInterval(() => {
+            document.getElementById("time").innerHTML= time++
+            
+            // When time reaches 10 seconds, stop the timer and show alert
+            if (time === 10) {
+                clearInterval(timer); // Stop the interval timer
+                alert("Time's up! You got: " + count + " clicks in 10 seconds.");
+            }
+        }, 1000); // The interval updates every second
+        }
+    }
+    </script>
+</body>
+</html>
